@@ -97,7 +97,7 @@ bot.on("message", async (ctx) => {
   const completion = await openai.createCompletion({
     model: "text-davinci-003",
     prompt: ctx.message.text,
-    max_tokens: 256,
+    max_tokens: 1000,
     temperature: 0.7,
     top_p: 1,
     frequency_penalty: 0,
