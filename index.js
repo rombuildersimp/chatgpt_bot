@@ -21,7 +21,7 @@ const configuration = new Configuration({
 const openai = new OpenAIApi(configuration);
 
 const app = express();
-app.use(express.static("public"));
+// app.use(express.static("public"));
 
 // view engine
 app.set("view engine", "ejs");
@@ -152,8 +152,9 @@ app.get("/replies", async (req, res) => {
   res.status(200).json(replies);
 });
 
-// Start your bot instance running on port 3000 of your server
+mongoose.set("strictQuery", false);
 
+// Start your bot instance running on port 3000 of your server
 mongoose
   .connect(process.env.MONGO_URI)
   .then((result) => {
