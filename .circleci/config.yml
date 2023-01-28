@@ -6,8 +6,8 @@ jobs:
       - image: node:18
     steps:
       - checkout
-      - run: pnpm install
-      - run: pnpm run dev
+      - run: npm install
+      - run: npm run dev 
 
 workflows:
   version: 2
