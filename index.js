@@ -156,7 +156,7 @@ mongoose.set("strictQuery", false);
 
 // Start your bot instance running on port 3000 of your server
 mongoose
-  .connect(process.env.MONGO_URI)
+  .connect(secrets.MONGO_URI)
   .then((result) => {
     app.listen(3000, () => {
       console.log("Bot is connected to db and running on port: 3000!");
